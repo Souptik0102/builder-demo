@@ -28,13 +28,18 @@ function Hero() {
         <p>HomeIQ connects you with exceptional residences and extraordinary properties, thoughtfully selected for the life you want to live.</p>
         <div className="hero-actions">
           <Link className="light-button" href="/projects">Explore Projects <ArrowRight /></Link>
-          <Link className="play-link" href="/about">
+          <a
+            className="play-link"
+            href="https://wa.me/917603037718?text=Hello%20HomeIQ%C2%B2%20Team!%20I%20am%20interested%20in%20exploring%20your%20exclusive%20properties%20and%20luxury%20real%20estate%20listings.%20Could%20you%20please%20share%20more%20details%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span>
               <svg className="w-4 h-4 fill-[#25D366]" viewBox="0 0 24 24">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
               </svg>
             </span> Contact us
-          </Link>
+          </a>
         </div>
       </div>
       <div className="hero-dots" aria-label="Hero image slides">
@@ -79,14 +84,16 @@ function HeroStatsBlock() {
 function ProjectCard({ project }: { project: typeof projects[number] }) {
   return (
     <article className="property-v2-card reveal-on-scroll">
-      <div className="property-card-image-wrapper">
-        <img src={project.image} alt={project.title} className="property-card-img" />
-        <div className="property-card-top-bar">
-          <span className="property-tag-badge">
-            <Key className="w-3.5 h-3.5" /> {project.tag}
-          </span>
+      <Link href={`/projects/${project.id}`} className="block overflow-hidden rounded-2xl group">
+        <div className="property-card-image-wrapper">
+          <img src={project.image} alt={project.title} className="property-card-img group-hover:scale-105 transition-transform duration-500" />
+          <div className="property-card-top-bar">
+            <span className="property-tag-badge">
+              <Key className="w-3.5 h-3.5" /> {project.tag}
+            </span>
+          </div>
         </div>
-      </div>
+      </Link>
       <div className="property-card-info">
         <Link href={`/projects/${project.id}`}>
           <h3 className="property-card-title hover:text-emerald-700 transition-colors">{project.title}</h3>
@@ -257,32 +264,39 @@ function UpcomingProjects() {
         </div>
 
         <div className="upcoming-carousel" ref={setCarouselEl}>
-          {upcomingProjectsList.map((item) => (
-            <article className="upcoming-card reveal-on-scroll" key={item.id}>
-              <div className="upcoming-image-wrapper">
-                <img src={item.image} alt={item.title} className="upcoming-img" />
-                <span className="upcoming-tag">{item.tag}</span>
-                <span className="upcoming-completion">{item.completion}</span>
-              </div>
-              <div className="upcoming-card-body">
-                <h3>{item.title}</h3>
-                <p className="upcoming-location">
-                  <MapPin className="w-3.5 h-3.5" /> {item.location}
-                </p>
-                <div className="upcoming-divider" />
-                <div className="upcoming-card-footer">
-                  <div className="upcoming-specs">
-                    <span><Maximize2 className="w-3.5 h-3.5" /> {item.area}</span>
-                    <span><Bed className="w-3.5 h-3.5" /> {item.beds}</span>
-                    <span><Bath className="w-3.5 h-3.5" /> {item.baths}</span>
+          {upcomingProjectsList.map((item) => {
+            const projectLink = `/projects/${item.id === 'up-1' ? '1' : item.id === 'up-2' ? '2' : '3'}`
+            return (
+              <article className="upcoming-card reveal-on-scroll" key={item.id}>
+                <Link href={projectLink} className="block overflow-hidden rounded-2xl group">
+                  <div className="upcoming-image-wrapper">
+                    <img src={item.image} alt={item.title} className="upcoming-img group-hover:scale-105 transition-transform duration-500" />
+                    <span className="upcoming-tag">{item.tag}</span>
+                    <span className="upcoming-completion">{item.completion}</span>
                   </div>
-                  <Link href={`/projects/${item.id === 'up-1' ? '1' : item.id === 'up-2' ? '2' : '3'}`} className="upcoming-link">
-                    View <ChevronRight className="w-3.5 h-3.5" />
+                </Link>
+                <div className="upcoming-card-body">
+                  <Link href={projectLink}>
+                    <h3 className="hover:text-emerald-700 transition-colors cursor-pointer">{item.title}</h3>
                   </Link>
+                  <p className="upcoming-location">
+                    <MapPin className="w-3.5 h-3.5" /> {item.location}
+                  </p>
+                  <div className="upcoming-divider" />
+                  <div className="upcoming-card-footer">
+                    <div className="upcoming-specs">
+                      <span><Maximize2 className="w-3.5 h-3.5" /> {item.area}</span>
+                      <span><Bed className="w-3.5 h-3.5" /> {item.beds}</span>
+                      <span><Bath className="w-3.5 h-3.5" /> {item.baths}</span>
+                    </div>
+                    <Link href={projectLink} className="upcoming-link">
+                      View <ChevronRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>
@@ -716,37 +730,6 @@ function Footer() {
   )
 }
 
-function FloatingWhatsApp() {
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 280) {
-        setVisible(true)
-      } else {
-        setVisible(false)
-      }
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  return (
-    <a
-      href="#contact"
-      className={`floating-whatsapp-btn ${visible ? 'is-visible' : ''}`}
-      aria-label="Chat on WhatsApp"
-    >
-      <span className="whatsapp-ping" />
-      <svg className="w-6 h-6 fill-white" viewBox="0 0 24 24">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-      </svg>
-      <span className="floating-whatsapp-tooltip">Chat with us</span>
-    </a>
-  )
-}
-
 export function LandingPage() {
   useEffect(() => {
     const observerCallback: IntersectionObserverCallback = (entries, observer) => {
@@ -783,7 +766,6 @@ export function LandingPage() {
         <Testimonials />
       </main>
       <SiteFooter />
-      <FloatingWhatsApp />
     </div>
   )
 }
