@@ -3,17 +3,21 @@
 import { useState, useEffect } from 'react'
 
 export function FloatingWhatsApp() {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 150) {
+      // Show WhatsApp button only after scrolling past the hero section (~350px)
+      if (window.scrollY > 350) {
         setVisible(true)
       } else {
-        setVisible(true)
+        setVisible(false)
       }
     }
+
     window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
