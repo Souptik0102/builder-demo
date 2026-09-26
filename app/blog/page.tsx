@@ -98,43 +98,41 @@ export default function BlogPage() {
         {/* Main Content: Sidebar + Latest Posts */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            {/* Sidebar (Search & Categories - Compact & Responsive) */}
-            <aside className="lg:space-y-6">
-              <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm space-y-4">
+            {/* Sidebar (Search & Categories - Compact) */}
+            <aside className="lg:space-y-4">
+              <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-slate-100 shadow-sm space-y-3">
                 {/* Search */}
-                <div className="space-y-2">
-                  <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Search</h3>
+                <div className="space-y-1.5">
+                  <h3 className="text-[10px] font-extrabold text-slate-800 uppercase tracking-widest">Search</h3>
                   <div className="relative">
-                    <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                    <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                     <input
                       type="text"
                       placeholder="Search for articles..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-900 placeholder:text-slate-400"
+                      className="w-full pl-8 pr-3 py-1.5 bg-slate-50/80 border border-slate-200/80 rounded-lg text-[11px] focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-900 placeholder:text-slate-400"
                     />
                   </div>
                 </div>
 
                 {/* Categories */}
-                <div className="space-y-2 pt-3 border-t border-slate-100">
-                  <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Categories</h3>
-                  {/* Horizontal Scrollable Pills on Mobile, Vertical Stack on Desktop */}
-                  <div className="flex lg:flex-col overflow-x-auto lg:overflow-x-visible gap-2 pb-1 lg:pb-0 no-scrollbar">
+                <div className="space-y-1.5 pt-2.5 border-t border-slate-100">
+                  <h3 className="text-[10px] font-extrabold text-slate-800 uppercase tracking-widest">Categories</h3>
+                  <div className="flex flex-wrap items-center gap-1.5">
                     {categories.map((cat) => (
                       <button
                         key={cat.id}
                         onClick={() => setSelectedCategory(cat.id)}
-                        className={`shrink-0 lg:w-full text-left px-3.5 py-2 rounded-xl text-xs font-semibold transition-all flex items-center justify-between gap-2.5 ${
+                        className={`px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all inline-flex items-center gap-1.5 ${
                           selectedCategory === cat.id
-                            ? 'bg-slate-900 text-white shadow-sm'
-                            : 'bg-slate-50 text-slate-700 hover:bg-slate-100'
+                            ? 'bg-[#0f141d] text-white shadow-xs font-semibold'
+                            : 'bg-slate-50 text-slate-600 hover:bg-slate-100'
                         }`}
                       >
-                        <span className="flex items-center gap-2 whitespace-nowrap">
-                          <Tag className="w-3.5 h-3.5 opacity-70" /> {cat.label}
-                        </span>
-                        {selectedCategory === cat.id && <Sparkles className="w-3.5 h-3.5 text-emerald-400 shrink-0" />}
+                        <Tag className="w-3 h-3 opacity-60" />
+                        <span>{cat.label}</span>
+                        {selectedCategory === cat.id && <Sparkles className="w-3 h-3 text-emerald-400" />}
                       </button>
                     ))}
                   </div>
