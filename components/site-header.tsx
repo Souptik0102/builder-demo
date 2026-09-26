@@ -1,21 +1,47 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
-  Building2, ChevronRight, Info, BookOpen, PhoneCall,
+  Building2, ChevronRight, Info, BookOpen,
   Menu, X, HelpCircle, ArrowRight
 } from 'lucide-react'
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
+  const [hidden, setHidden] = useState(false)
+  const lastScrollY = useRef(0)
   const pathname = usePathname()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      // If mobile dropdown menu is open, keep header visible
+      if (open) {
+        setHidden(false)
+        return
+      }
+
+      // Hide header when scrolling down past 60px; reveal header when scrolling up
+      if (currentScrollY > 60 && currentScrollY > lastScrollY.current + 4) {
+        setHidden(true)
+      } else if (currentScrollY < lastScrollY.current - 4 || currentScrollY <= 40) {
+        setHidden(false)
+      }
+
+      lastScrollY.current = currentScrollY
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [open])
 
   const isActive = (path: string) => pathname === path
 
   return (
-    <div className="site-header-wrapper">
+    <div className={`site-header-wrapper ${hidden ? 'header-hidden' : 'header-visible'}`}>
       <header className={open ? 'site-header has-open-menu' : 'site-header'}>
         <Link className="brand" href="/" onClick={() => setOpen(false)}>
           HomeIQ<span>²</span>
