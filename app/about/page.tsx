@@ -113,11 +113,8 @@ export default function AboutPage() {
                 From luxury villas to urban penthouses, we guide buyers, sellers, and investors through every real estate journey with expertise and tailored advisory.
               </p>
               <div className="flex items-center gap-3">
-                <Link
-                  href="/projects"
-                  className="inline-flex items-center gap-2 bg-slate-900 hover:bg-emerald-700 text-white font-semibold text-xs px-5 py-2.5 rounded-full transition-colors shadow-sm"
-                >
-                  Explore properties <ArrowRight className="w-3.5 h-3.5" />
+                <Link href="/projects" className="btn-dark">
+                  <span>Explore properties</span> <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <a
                   href="#values"
@@ -172,11 +169,8 @@ export default function AboutPage() {
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                 We believe acquiring or selling a property should be an empowering experience built on clarity, integrity, and relentless pursuit of excellence.
               </p>
-              <Link
-                href="/projects"
-                className="inline-flex items-center gap-2 bg-slate-900 hover:bg-emerald-700 text-white font-semibold text-xs px-5 py-2.5 rounded-full transition-colors shadow-sm"
-              >
-                Explore properties <ArrowRight className="w-3.5 h-3.5" />
+              <Link href="/projects" className="btn-dark">
+                <span>Explore properties</span> <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
@@ -223,11 +217,8 @@ export default function AboutPage() {
                 Finding a home isn't just about square footage or zip codes—it's about matching your lifestyle with a space where you can create lasting memories. Our team works tirelessly to match your unique criteria with premier properties.
               </p>
               <div className="pt-2">
-                <Link
-                  href="/projects"
-                  className="inline-flex items-center gap-2 bg-slate-900 hover:bg-emerald-700 text-white font-semibold text-xs px-5 py-2.5 rounded-full transition-colors shadow-sm"
-                >
-                  Explore properties <ArrowRight className="w-3.5 h-3.5" />
+                <Link href="/projects" className="btn-dark">
+                  <span>Explore properties</span> <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </div>
@@ -251,12 +242,8 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <Link
-                href="/projects"
-                className="inline-flex items-center gap-2 bg-white hover:bg-emerald-400 font-bold text-xs px-5 py-2.5 rounded-full transition-colors shadow-sm"
-                style={{ color: '#0f141d' }}
-              >
-                <span>View on map</span> <ArrowRight className="w-3.5 h-3.5 text-[#0f141d]" />
+              <Link href="/projects" className="btn-light">
+                <span>View on map</span> <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
@@ -307,12 +294,8 @@ export default function AboutPage() {
 
             {/* Bottom Button */}
             <div className="text-center pt-2">
-              <Link
-                href="/projects"
-                className="inline-flex items-center gap-2 bg-white hover:bg-emerald-400 font-bold text-xs px-6 py-3 rounded-full transition-colors shadow-sm"
-                style={{ color: '#0f141d' }}
-              >
-                <span>Book an appointment</span> <ArrowRight className="w-4 h-4 text-[#0f141d]" />
+              <Link href="/projects" className="btn-light">
+                <span>Book an appointment</span> <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -358,11 +341,8 @@ export default function AboutPage() {
           </div>
 
           <div className="text-center pt-2">
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-emerald-700 text-white font-semibold text-xs px-6 py-3 rounded-full transition-colors shadow-sm"
-            >
-              Browse properties <ArrowRight className="w-4 h-4" />
+            <Link href="/projects" className="btn-dark">
+              <span>Browse properties</span> <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </section>
