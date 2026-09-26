@@ -132,34 +132,27 @@ export default function AboutPage() {
           {/* Dual Photo Gallery & Metrics */}
           <div className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="rounded-3xl overflow-hidden h-[280px] sm:h-[380px] shadow-md group relative">
+              <div className="rounded-3xl overflow-hidden h-[300px] sm:h-[400px] shadow-lg group relative">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80"
-                  alt="Real estate consultation"
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=85"
+                  alt="Real estate consultation with clients"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
+                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/50 shadow-md">
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Homes purchased</p>
+                  <p className="text-xl font-extrabold text-slate-900 font-outfit">10k+</p>
+                </div>
               </div>
-              <div className="rounded-3xl overflow-hidden h-[280px] sm:h-[380px] shadow-md group relative">
+              <div className="rounded-3xl overflow-hidden h-[300px] sm:h-[400px] shadow-lg group relative">
                 <img
-                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85"
                   alt="Our advisory team"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-              </div>
-            </div>
-
-            {/* Metrics Bar */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm flex flex-wrap items-center justify-around gap-8">
-              <div className="text-center">
-                <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Homes purchased</p>
-                <div className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-outfit mt-1">10k+</div>
-                <p className="text-[11px] text-slate-500 mt-0.5">Successful client matches</p>
-              </div>
-              <div className="h-10 w-px bg-slate-100 hidden sm:block" />
-              <div className="text-center">
-                <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Active buyers & investors</p>
-                <div className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-outfit mt-1">500k</div>
-                <p className="text-[11px] text-slate-500 mt-0.5">Across major metro markets</p>
+                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/50 shadow-md">
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Active buyers & investors</p>
+                  <p className="text-xl font-extrabold text-slate-900 font-outfit">500k</p>
+                </div>
               </div>
             </div>
           </div>

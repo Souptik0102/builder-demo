@@ -23,14 +23,6 @@ export function SiteHeader() {
 
         <nav className={open ? 'nav-links is-open' : 'nav-links'} aria-label="Primary navigation">
           <Link
-            href="/"
-            className={isActive('/') ? 'active' : ''}
-            onClick={() => setOpen(false)}
-          >
-            <span className="mobile-nav-label">Home</span>
-            <ChevronRight className="mobile-nav-arrow" />
-          </Link>
-          <Link
             href="/projects"
             className={isActive('/projects') ? 'active' : ''}
             onClick={() => setOpen(false)}
@@ -46,7 +38,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
           >
             <span className="mobile-nav-label">
-              <BookOpen className="w-4 h-4 text-emerald-400" /> Journal / Blog
+              <BookOpen className="w-4 h-4 text-emerald-400" /> Our Blogs
             </span>
             <ChevronRight className="mobile-nav-arrow" />
           </Link>
@@ -67,12 +59,6 @@ export function SiteHeader() {
           >
             <span className="mobile-nav-label">
               <Info className="w-4 h-4 text-emerald-400" /> About
-            </span>
-            <ChevronRight className="mobile-nav-arrow" />
-          </Link>
-          <Link href="/#contact" onClick={() => setOpen(false)}>
-            <span className="mobile-nav-label">
-              <PhoneCall className="w-4 h-4 text-emerald-400" /> Contact
             </span>
             <ChevronRight className="mobile-nav-arrow" />
           </Link>
