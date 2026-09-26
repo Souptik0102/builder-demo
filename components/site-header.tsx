@@ -60,7 +60,11 @@ export function SiteHeader() {
             </span>
             <ChevronRight className="mobile-nav-arrow" />
           </Link>
-          <Link href="/#about" onClick={() => setOpen(false)}>
+          <Link
+            href="/about"
+            className={isActive('/about') ? 'active' : ''}
+            onClick={() => setOpen(false)}
+          >
             <span className="mobile-nav-label">
               <Info className="w-4 h-4 text-emerald-400" /> About
             </span>
