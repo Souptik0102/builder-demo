@@ -5,12 +5,14 @@ import Link from 'next/link'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { projects, Project } from '@/lib/data'
+import { useScrollReveal } from '@/lib/utils'
 import {
   Building2, MapPin, Maximize2, Bath, Bed, Car, ChevronRight,
   Search, SlidersHorizontal, Key, PlusCircle, ArrowRight
 } from 'lucide-react'
 
 export default function ProjectsPage() {
+  useScrollReveal()
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCity, setSelectedCity] = useState('all')
   const [selectedTag, setSelectedTag] = useState('all')
@@ -37,7 +39,7 @@ export default function ProjectsPage() {
 
       <main className="flex-1">
         {/* Dark Hero Header */}
-        <section className="bg-[#0f141d] text-white pt-16 pb-24 px-4 sm:px-8 text-center rounded-b-[32px] relative overflow-hidden">
+        <section className="bg-[#0f141d] text-white pt-16 pb-24 px-4 sm:px-8 text-center rounded-b-[32px] relative overflow-hidden reveal-on-scroll">
           <div className="max-w-4xl mx-auto space-y-4">
             <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
               <Building2 className="w-3.5 h-3.5" /> All Properties
@@ -52,7 +54,7 @@ export default function ProjectsPage() {
         </section>
 
         {/* Filter Bar (Floating Container) */}
-        <section className="max-w-6xl mx-auto -mt-10 px-4 sm:px-6 relative z-10">
+        <section className="max-w-6xl mx-auto -mt-10 px-4 sm:px-6 relative z-10 reveal-on-scroll">
           <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-xl border border-slate-100 space-y-4 sm:space-y-0 sm:flex sm:items-center sm:gap-4">
             {/* Search Input */}
             <div className="flex-1 relative">
@@ -96,7 +98,7 @@ export default function ProjectsPage() {
         </section>
 
         {/* Projects Grid Section */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 reveal-on-scroll">
           {filteredProjects.length === 0 ? (
             <div className="text-center py-16 bg-white rounded-2xl border border-slate-100 shadow-sm space-y-3">
               <SlidersHorizontal className="w-10 h-10 text-slate-300 mx-auto" />

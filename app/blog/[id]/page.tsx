@@ -1,8 +1,12 @@
+'use client'
+
+import { use } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { journalArticles } from '@/lib/data'
+import { useScrollReveal } from '@/lib/utils'
 import {
   Calendar, Clock, ChevronRight, CheckCircle2,
   ArrowRight, Tag, BookOpen, Share2
@@ -12,8 +16,9 @@ interface PageProps {
   params: Promise<{ id: string }>
 }
 
-export default async function BlogDetailPage({ params }: PageProps) {
-  const resolvedParams = await params
+export default function BlogDetailPage({ params }: PageProps) {
+  useScrollReveal()
+  const resolvedParams = use(params)
   const article = journalArticles.find((a) => a.id === resolvedParams.id)
 
   if (!article) {
@@ -37,7 +42,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
         </div>
 
         {/* Article Header Card */}
-        <div className="bg-white rounded-2xl p-6 sm:p-10 border border-slate-100 shadow-sm space-y-6 mb-8">
+        <div className="bg-white rounded-2xl p-6 sm:p-10 border border-slate-100 shadow-sm space-y-6 mb-8 reveal-on-scroll">
           <div className="flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold">
               <Tag className="w-3.5 h-3.5" /> {article.tag}

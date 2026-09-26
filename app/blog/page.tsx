@@ -5,12 +5,14 @@ import Link from 'next/link'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { journalArticles, Article } from '@/lib/data'
+import { useScrollReveal } from '@/lib/utils'
 import {
   BookOpen, Search, Calendar, ChevronRight, ArrowRight,
   Sparkles, Tag, PlusCircle
 } from 'lucide-react'
 
 export default function BlogPage() {
+  useScrollReveal()
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
 
@@ -45,7 +47,7 @@ export default function BlogPage() {
 
       <main className="flex-1">
         {/* Dark Hero Header with Featured Cards */}
-        <section className="bg-[#0f141d] text-white pt-16 pb-20 px-4 sm:px-8 rounded-b-[32px]">
+        <section className="bg-[#0f141d] text-white pt-16 pb-20 px-4 sm:px-8 rounded-b-[32px] reveal-on-scroll">
           <div className="max-w-5xl mx-auto space-y-8">
             <div className="text-center space-y-3">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider">

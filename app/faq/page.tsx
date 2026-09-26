@@ -5,9 +5,11 @@ import Link from 'next/link'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { faqList } from '@/lib/data'
+import { useScrollReveal } from '@/lib/utils'
 import { HelpCircle, Plus, Minus, ArrowRight, MessageCircle } from 'lucide-react'
 
 export default function FAQPage() {
+  useScrollReveal()
   const [openId, setOpenId] = useState<string>('faq-1')
 
   const toggleAccordion = (id: string) => {
@@ -20,7 +22,7 @@ export default function FAQPage() {
 
       <main className="flex-1 max-w-4xl mx-auto w-full px-4 sm:px-6 py-16">
         {/* Title Header (Matching Screenshot #5) */}
-        <div className="text-center space-y-4 mb-12">
+        <div className="text-center space-y-4 mb-12 reveal-on-scroll">
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold uppercase tracking-wider">
             <HelpCircle className="w-3.5 h-3.5" /> Support & FAQs
           </span>
@@ -33,7 +35,7 @@ export default function FAQPage() {
         </div>
 
         {/* Accordion Container Card (Matching Screenshot #5) */}
-        <div className="bg-white rounded-3xl p-4 sm:p-8 border border-slate-100 shadow-sm space-y-2">
+        <div className="bg-white rounded-3xl p-4 sm:p-8 border border-slate-100 shadow-sm space-y-2 reveal-on-scroll">
           {faqList.map((item) => {
             const isOpen = openId === item.id
 
@@ -69,7 +71,7 @@ export default function FAQPage() {
         </div>
 
         {/* Still Have Questions CTA */}
-        <div className="mt-16 bg-[#0f141d] rounded-3xl p-8 sm:p-12 text-white text-center space-y-4">
+        <div className="mt-16 bg-[#0f141d] rounded-3xl p-8 sm:p-12 text-white text-center space-y-4 reveal-on-scroll">
           <MessageCircle className="w-8 h-8 text-emerald-400 mx-auto" />
           <h2 className="text-2xl font-bold font-outfit text-white">Still have questions?</h2>
           <p className="text-slate-300 text-xs sm:text-sm max-w-md mx-auto">

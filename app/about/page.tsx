@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
+import { useScrollReveal } from '@/lib/utils'
 import {
   Building2, ArrowRight, ShieldCheck, MapPin, Phone, Mail,
   Sparkles, CheckCircle2, ChevronRight, Users, Award, Heart,
@@ -11,6 +12,7 @@ import {
 } from 'lucide-react'
 
 export default function AboutPage() {
+  useScrollReveal()
   const teamMembers = [
     {
       name: 'John Carver',
@@ -97,7 +99,7 @@ export default function AboutPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-16 space-y-12">
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-16 space-y-12 reveal-on-scroll">
           {/* Header Row */}
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
             <div className="space-y-2 max-w-xl">
@@ -164,7 +166,7 @@ export default function AboutPage() {
         </section>
 
         {/* Values Section */}
-        <section id="values" className="max-w-6xl mx-auto px-4 sm:px-6 py-16 border-t border-slate-100">
+        <section id="values" className="max-w-6xl mx-auto px-4 sm:px-6 py-16 border-t border-slate-100 reveal-on-scroll">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Left Box */}
             <div className="space-y-6">
@@ -207,7 +209,7 @@ export default function AboutPage() {
         </section>
 
         {/* Mission Feature Section */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 reveal-on-scroll">
           <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-100 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-2xl overflow-hidden h-[280px] sm:h-[340px] shadow-sm">
               <img
@@ -240,7 +242,7 @@ export default function AboutPage() {
         </section>
 
         {/* Offices Section (Dark Card Section) */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 reveal-on-scroll">
           <div className="bg-[#0f141d] rounded-3xl p-8 sm:p-12 text-white space-y-8 shadow-xl border border-slate-800 relative overflow-hidden">
             {/* Office Header Row */}
             <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
@@ -324,7 +326,7 @@ export default function AboutPage() {
         </section>
 
         {/* Meet Our Agents Section */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-10">
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-10 reveal-on-scroll">
           <div className="text-center space-y-3 max-w-xl mx-auto">
             <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
               <Users className="w-3.5 h-3.5 text-emerald-600" /> Our team
@@ -373,7 +375,7 @@ export default function AboutPage() {
         </section>
 
         {/* Instagram Showcase */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-20 space-y-8">
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-20 space-y-8 reveal-on-scroll">
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
             <div>
               <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 mb-2">

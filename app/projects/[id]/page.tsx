@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { projects, Project } from '@/lib/data'
+import { useScrollReveal } from '@/lib/utils'
 import {
   MapPin, Maximize2, Bed, Bath, Car, ArrowRight,
   CheckCircle2, Key, Phone, Mail, ChevronRight, Building2,
@@ -17,6 +18,7 @@ interface PageProps {
 }
 
 export default function ProjectDetailPage({ params }: PageProps) {
+  useScrollReveal()
   const resolvedParams = use(params)
   const project = projects.find((p) => p.id === resolvedParams.id)
 
@@ -41,7 +43,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
         </div>
 
         {/* Gallery Grid Section (Matching Screenshot #3) */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 reveal-on-scroll">
           <div className="md:col-span-2 relative rounded-2xl overflow-hidden shadow-md group h-[320px] sm:h-[420px]">
             <img
               src={project.gallery[0] || project.image}
