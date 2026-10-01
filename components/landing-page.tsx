@@ -25,12 +25,12 @@ function Hero() {
       <div className="hero-content">
         <span className="eyebrow inverse">Premium real estate, curated with purpose</span>
         <h1>Smart Way to Find Your<br /><em>Next Home.</em></h1>
-        <p>HomeIQ connects you with exceptional residences and extraordinary properties, thoughtfully selected for the life you want to live.</p>
+        <p>Traum Properties Pvt Ltd connects you with exceptional residences and extraordinary properties, thoughtfully selected for the life you want to live.</p>
         <div className="hero-actions">
           <Link className="light-button" href="/projects">Explore Projects <ArrowRight /></Link>
           <a
             className="play-link"
-            href="https://wa.me/917603037718?text=Hello%20HomeIQ%C2%B2%20Team!%20I%20am%20interested%20in%20exploring%20your%20exclusive%20properties%20and%20luxury%20real%20estate%20listings.%20Could%20you%20please%20share%20more%20details%3F"
+            href="https://wa.me/917603037718?text=Hello%20Traum Properties Pvt Ltd%C2%B2%20Team!%20I%20am%20interested%20in%20exploring%20your%20exclusive%20properties%20and%20luxury%20real%20estate%20listings.%20Could%20you%20please%20share%20more%20details%3F"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -96,7 +96,7 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
       </Link>
       <div className="property-card-info">
         <Link href={`/projects/${project.id}`}>
-          <h3 className="property-card-title hover:text-emerald-700 transition-colors">{project.title}</h3>
+          <h3 className="property-card-title hover:text-red-700 transition-colors">{project.title}</h3>
         </Link>
         <div className="property-card-location">
           <MapPin className="w-4 h-4 text-gray-900" />
@@ -240,7 +240,7 @@ function UpcomingProjects() {
         <div className="upcoming-header-row">
           <div>
             <div className="properties-badge">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600" /> Future developments
+              <Sparkles className="w-3.5 h-3.5 text-red-600" /> Future developments
             </div>
             <h2>Upcoming Projects</h2>
             <p>Exclusive preview of architectural landmarks currently in development.</p>
@@ -277,7 +277,7 @@ function UpcomingProjects() {
                 </Link>
                 <div className="upcoming-card-body">
                   <Link href={projectLink}>
-                    <h3 className="hover:text-emerald-700 transition-colors cursor-pointer">{item.title}</h3>
+                    <h3 className="hover:text-red-700 transition-colors cursor-pointer">{item.title}</h3>
                   </Link>
                   <p className="upcoming-location">
                     <MapPin className="w-3.5 h-3.5" /> {item.location}
@@ -439,7 +439,7 @@ function Journal() {
       <div className="section-heading journal-heading-row">
         <div>
           <div className="properties-badge mb-2">
-            <BookOpen className="w-3.5 h-3.5 text-emerald-600" /> Editorial & Insights
+            <BookOpen className="w-3.5 h-3.5 text-red-600" /> Editorial & Insights
           </div>
           <h2 className="journal-title">Blog Highlights</h2>
           <p className="journal-subtext">
@@ -516,28 +516,28 @@ function Stats() {
       value: '$4.2B',
       label: 'Total Estate Volume',
       copy: 'Exceptional growth from a commitment to the best.',
-      icon: <Building2 className="w-5 h-5 text-emerald-600" />,
+      icon: <Building2 className="w-5 h-5 text-red-600" />,
       badge: '+34% YoY',
     },
     {
       value: '99.4%',
       label: 'Satisfaction & Retention',
       copy: 'Our clients return because the details matter.',
-      icon: <Star className="w-5 h-5 text-emerald-600" />,
+      icon: <Star className="w-5 h-5 text-red-600" />,
       badge: 'Top Tier',
     },
     {
       value: '18 Days',
       label: 'Avg. Match-to-Contract',
       copy: 'The right home, with a process that respects your time.',
-      icon: <ShieldCheck className="w-5 h-5 text-emerald-600" />,
+      icon: <ShieldCheck className="w-5 h-5 text-red-600" />,
       badge: 'Speed',
     },
     {
       value: '42+',
       label: 'Markets & Networks',
       copy: 'Local expertise with a truly global point of view.',
-      icon: <Globe className="w-5 h-5 text-emerald-600" />,
+      icon: <Globe className="w-5 h-5 text-red-600" />,
       badge: 'Global',
     },
   ]
@@ -547,7 +547,7 @@ function Stats() {
       <div className="stats-container">
         <div className="stats-header">
           <span className="stats-eyebrow">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+            <Sparkles className="w-3.5 h-3.5 text-red-600" />
             Proven Track Record
           </span>
           <h2>Institutional Scale, Bespoke Precision</h2>
@@ -637,7 +637,7 @@ function Testimonials() {
         <div className="testimonials-column-left">
           <div className="testimonials-top-content">
             <div className="properties-badge">
-              <MessageCircle className="w-3.5 h-3.5 text-emerald-600" /> Testimonials
+              <MessageCircle className="w-3.5 h-3.5 text-red-600" /> Testimonials
             </div>
             <h2>Look at what<br />people say about us</h2>
             <p>
@@ -679,7 +679,7 @@ function CTA() {
         <span className="eyebrow">Smart home discovery</span>
         <h2>Ready to Find Your Perfect Home?</h2>
         <p>Experience a smarter, more personal approach to real estate. Let&apos;s find a place that feels like it was made for you.</p>
-        <a className="dark-button" href="mailto:hello@homeiq.example">
+        <a className="dark-button" href="mailto:hello@traumproperties.com">
           Connect with us <ArrowRight />
         </a>
       </div>
@@ -693,14 +693,14 @@ function Footer() {
       <div className="footer-card reveal-on-scroll">
         <div className="footer-brand-header">
           <a className="footer-brand" href="#top">
-            <Building2 className="w-5 h-5 text-emerald-400" />
-            <span>HomeIQ<sup className="text-emerald-400 font-semibold">2</sup></span>
+            <Building2 className="w-5 h-5 text-red-500" />
+            <span>Traum Properties Pvt Ltd<sup className="text-red-500 font-semibold">2</sup></span>
           </a>
         </div>
         <div className="footer-divider" />
         <div className="footer-bottom">
           <p className="footer-copyright">
-            Copyright © 2025 HomeIQ² | Exclusive Luxury Real Estate
+            Copyright © 2025 Traum Properties Pvt Ltd | Exclusive Luxury Real Estate
           </p>
           <div className="footer-social-links">
             <a href="#top" aria-label="Facebook">

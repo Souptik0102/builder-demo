@@ -3,33 +3,29 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'HomeIQ — Curated Homes & Exceptional Living',
-  description: 'Discover exceptional residences and extraordinary properties with HomeIQ.',
+  title: 'Traum Properties Pvt Ltd — Exclusive Luxury Real Estate',
+  description: 'Discover exceptional residences, trophy estates, and premium properties with Traum Properties Pvt Ltd.',
   generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
+        url: '/logo.png',
+        type: 'image/png',
       },
       {
         url: '/icon.svg',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/logo.png',
   },
 }
 
 export const viewport: Viewport = {
   colorScheme: 'light dark',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f5fbf8' },
-    { media: '(prefers-color-scheme: dark)', color: '#061b17' },
+    { media: '(prefers-color-scheme: light)', color: '#fafafc' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0b0e' },
   ],
 }
 

@@ -23,14 +23,14 @@ export default function FAQPage() {
       <main className="flex-1 max-w-4xl mx-auto w-full px-4 sm:px-6 py-16">
         {/* Title Header (Matching Screenshot #5) */}
         <div className="text-center space-y-4 mb-12 reveal-on-scroll">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold uppercase tracking-wider">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-800 text-xs font-semibold uppercase tracking-wider">
             <HelpCircle className="w-3.5 h-3.5" /> Support & FAQs
           </span>
           <h1 className="text-3xl sm:text-5xl font-bold text-slate-900 font-outfit tracking-tight">
             Frequently asked<br />questions
           </h1>
           <p className="text-slate-600 text-sm sm:text-base max-w-lg mx-auto font-light">
-            Everything you need to know about listing, purchasing, off-market advisory, and international acquisitions with HomeIQ.
+            Everything you need to know about listing, purchasing, off-market advisory, and international acquisitions with Traum Properties Pvt Ltd.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function FAQPage() {
                   onClick={() => toggleAccordion(item.id)}
                   className="w-full flex items-center justify-between text-left font-bold text-slate-900 text-base sm:text-lg focus:outline-none gap-4 group"
                 >
-                  <span className="group-hover:text-emerald-700 transition-colors font-outfit">
+                  <span className="group-hover:text-red-700 transition-colors font-outfit">
                     {item.question}
                   </span>
                   <span className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${
@@ -72,7 +72,7 @@ export default function FAQPage() {
 
         {/* Still Have Questions CTA */}
         <div className="mt-16 bg-[#0f141d] rounded-3xl p-8 sm:p-12 text-white text-center space-y-4 reveal-on-scroll">
-          <MessageCircle className="w-8 h-8 text-emerald-400 mx-auto" />
+          <MessageCircle className="w-8 h-8 text-red-500 mx-auto" />
           <h2 className="text-2xl font-bold font-outfit text-white">Still have questions?</h2>
           <p className="text-slate-300 text-xs sm:text-sm max-w-md mx-auto">
             Our private acquisitions desk is available 24/7 to answer your specific property inquiries.
@@ -80,7 +80,7 @@ export default function FAQPage() {
           <div className="pt-2">
             <Link
               href="/#contact"
-              className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs px-6 py-3 rounded-full transition-colors"
+              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-slate-950 font-bold text-xs px-6 py-3 rounded-full transition-colors"
             >
               Contact Us Now <ArrowRight className="w-4 h-4" />
             </Link>

@@ -41,7 +41,7 @@ export default function ProjectsPage() {
         {/* Dark Hero Header */}
         <section className="bg-[#0f141d] text-white pt-16 pb-24 px-4 sm:px-8 text-center rounded-b-[32px] relative overflow-hidden reveal-on-scroll">
           <div className="max-w-4xl mx-auto space-y-4">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-red-500 text-xs font-semibold uppercase tracking-wider">
               <Building2 className="w-3.5 h-3.5" /> All Properties
             </span>
             <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white font-outfit">
@@ -64,7 +64,7 @@ export default function ProjectsPage() {
                 placeholder="Search by title, location or city..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-slate-900 placeholder:text-slate-400"
+                className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-red-600/20 focus:border-red-600 text-slate-900 placeholder:text-slate-400"
               />
             </div>
 
@@ -73,7 +73,7 @@ export default function ProjectsPage() {
               <select
                 value={selectedCity}
                 onChange={(e) => setSelectedCity(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-800 font-medium focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-800 font-medium focus:outline-none focus:ring-2 focus:ring-red-600/20 focus:border-red-600"
               >
                 <option value="all">All Locations</option>
                 <option value="san francisco">San Francisco</option>
@@ -87,7 +87,7 @@ export default function ProjectsPage() {
               <select
                 value={selectedTag}
                 onChange={(e) => setSelectedTag(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-800 font-medium focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-800 font-medium focus:outline-none focus:ring-2 focus:ring-red-600/20 focus:border-red-600"
               >
                 <option value="all">All Status</option>
                 <option value="For rent">For Rent</option>
@@ -106,7 +106,7 @@ export default function ProjectsPage() {
               <p className="text-sm text-slate-500">Try adjusting your search terms or filters.</p>
               <button
                 onClick={() => { setSearchTerm(''); setSelectedCity('all'); setSelectedTag('all'); }}
-                className="inline-flex items-center text-xs font-semibold text-emerald-600 hover:underline pt-2"
+                className="inline-flex items-center text-xs font-semibold text-red-600 hover:underline pt-2"
               >
                 Reset all filters
               </button>
@@ -128,10 +128,10 @@ export default function ProjectsPage() {
                   </div>
                   <div className="property-card-info">
                     <Link href={`/projects/${project.id}`}>
-                      <h3 className="property-card-title hover:text-emerald-700 transition-colors">{project.title}</h3>
+                      <h3 className="property-card-title hover:text-red-700 transition-colors">{project.title}</h3>
                     </Link>
                     <div className="property-card-location">
-                      <MapPin className="w-4 h-4 text-emerald-600" />
+                      <MapPin className="w-4 h-4 text-red-600" />
                       <span>{project.address}</span>
                     </div>
                     <div className="property-card-divider" />

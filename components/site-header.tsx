@@ -43,8 +43,17 @@ export function SiteHeader() {
   return (
     <div className={`site-header-wrapper ${hidden ? 'header-hidden' : 'header-visible'}`}>
       <header className={open ? 'site-header has-open-menu' : 'site-header'}>
-        <Link className="brand" href="/" onClick={() => setOpen(false)}>
-          HomeIQ<span>²</span>
+        <Link className="brand flex items-center gap-3 group" href="/" onClick={() => setOpen(false)}>
+          <div className="bg-white/95 p-1 rounded-lg border border-red-600/30 shadow-md transition-all duration-300 group-hover:scale-105 group-hover:border-red-500 flex items-center justify-center">
+            <img 
+              src="/logo.jpg" 
+              alt="Traum Properties Logo" 
+              className="h-8 md:h-10 w-auto object-contain rounded"
+            />
+          </div>
+          <span className="hidden sm:inline-block font-extrabold tracking-tight text-white text-sm lg:text-base font-outfit uppercase">
+            Traum <span className="text-red-500">Properties</span>
+          </span>
         </Link>
 
         <nav className={open ? 'nav-links is-open' : 'nav-links'} aria-label="Primary navigation">
@@ -54,7 +63,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
           >
             <span className="mobile-nav-label">
-              <Building2 className="w-4 h-4 text-emerald-400" /> Projects
+              <Building2 className="w-4 h-4 text-red-500" /> Projects
             </span>
             <ChevronRight className="mobile-nav-arrow" />
           </Link>
@@ -64,7 +73,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
           >
             <span className="mobile-nav-label">
-              <BookOpen className="w-4 h-4 text-emerald-400" /> Our Blogs
+              <BookOpen className="w-4 h-4 text-red-500" /> Our Blogs
             </span>
             <ChevronRight className="mobile-nav-arrow" />
           </Link>
@@ -74,7 +83,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
           >
             <span className="mobile-nav-label">
-              <HelpCircle className="w-4 h-4 text-emerald-400" /> FAQ
+              <HelpCircle className="w-4 h-4 text-red-500" /> FAQ
             </span>
             <ChevronRight className="mobile-nav-arrow" />
           </Link>
@@ -84,7 +93,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
           >
             <span className="mobile-nav-label">
-              <Info className="w-4 h-4 text-emerald-400" /> About
+              <Info className="w-4 h-4 text-red-500" /> About
             </span>
             <ChevronRight className="mobile-nav-arrow" />
           </Link>

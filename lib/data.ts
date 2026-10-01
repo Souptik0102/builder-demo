@@ -91,7 +91,7 @@ export const projects: Project[] = [
       name: 'Sophie Moore',
       role: 'Senior Real Estate Specialist',
       phone: '(415) 720-4119',
-      email: 'sophie@homeiq.example',
+      email: 'sophie@traumproperties.com',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=350&q=80'
     }
   },
@@ -124,7 +124,7 @@ export const projects: Project[] = [
       name: 'Marcus Vance',
       role: 'Principal Partner',
       phone: '(310) 982-3001',
-      email: 'marcus@homeiq.example',
+      email: 'marcus@traumproperties.com',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=350&q=80'
     }
   },
@@ -157,7 +157,7 @@ export const projects: Project[] = [
       name: 'Sophie Moore',
       role: 'Senior Real Estate Specialist',
       phone: '(415) 720-4119',
-      email: 'sophie@homeiq.example',
+      email: 'sophie@traumproperties.com',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=350&q=80'
     }
   },
@@ -190,7 +190,7 @@ export const projects: Project[] = [
       name: 'Elena Rostova',
       role: 'Director of Luxury Acquisitions',
       phone: '(619) 441-9080',
-      email: 'elena@homeiq.example',
+      email: 'elena@traumproperties.com',
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=350&q=80'
     }
   },
@@ -222,7 +222,7 @@ export const projects: Project[] = [
       name: 'Elena Rostova',
       role: 'Director of Luxury Acquisitions',
       phone: '(619) 441-9080',
-      email: 'elena@homeiq.example',
+      email: 'elena@traumproperties.com',
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=350&q=80'
     }
   },
@@ -254,7 +254,7 @@ export const projects: Project[] = [
       name: 'Marcus Vance',
       role: 'Principal Partner',
       phone: '(310) 982-3001',
-      email: 'marcus@homeiq.example',
+      email: 'marcus@traumproperties.com',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=350&q=80'
     }
   }
@@ -411,13 +411,13 @@ export const faqList: FAQItem[] = [
   {
     id: 'faq-1',
     question: 'How can I post my house for sale or rent?',
-    answer: 'Posting your property with HomeIQ is seamless. Simply submit your property details through our portal or connect directly with one of our private advisors. Our team will conduct a comprehensive valuation, schedule professional architectural photography and 3D virtual tours, and launch targeted off-market or public marketing campaigns across our global buyer network.',
+    answer: 'Posting your property with Traum Properties Pvt Ltd is seamless. Simply submit your property details through our portal or connect directly with one of our private advisors. Our team will conduct a comprehensive valuation, schedule professional architectural photography and 3D virtual tours, and launch targeted off-market or public marketing campaigns across our global buyer network.',
     category: 'Listing'
   },
   {
     id: 'faq-2',
     question: 'What is your realtor sale commission structure?',
-    answer: 'HomeIQ operates on a transparent, competitive advisory fee model tailored to the scope and exclusivity of the estate. Standard listings feature clear commission structures with zero hidden fees. For ultra-high-net-worth trophy estates and private off-market listings, we provide custom advisory retainers aligned with transaction goals.',
+    answer: 'Traum Properties Pvt Ltd operates on a transparent, competitive advisory fee model tailored to the scope and exclusivity of the estate. Standard listings feature clear commission structures with zero hidden fees. For ultra-high-net-worth trophy estates and private off-market listings, we provide custom advisory retainers aligned with transaction goals.',
     category: 'Fees'
   },
   {
@@ -428,7 +428,7 @@ export const faqList: FAQItem[] = [
   },
   {
     id: 'faq-4',
-    question: 'What’s the average time to sale a house with HomeIQ?',
+    question: 'What’s the average time to sale a house with Traum Properties Pvt Ltd?',
     answer: 'Our average match-to-contract duration is just 18 days — significantly faster than the industry benchmark. By leveraging predictive buyer matching algorithms and our confidential global network, we connect qualified buyers with luxury sellers swiftly and discreetly.',
     category: 'Process'
   },
@@ -440,7 +440,7 @@ export const faqList: FAQItem[] = [
   },
   {
     id: 'faq-6',
-    question: 'Can international buyers acquire properties through HomeIQ?',
+    question: 'Can international buyers acquire properties through Traum Properties Pvt Ltd?',
     answer: 'Yes! Over 35% of our client portfolio consists of international buyers and family offices. We provide complete end-to-end concierge services including multi-currency escrow guidance, international tax advisory coordination, remote biometric closing, and turnkey property management.',
     category: 'International'
   }

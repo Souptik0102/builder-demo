@@ -35,9 +35,9 @@ export default function ProjectDetailPage({ params }: PageProps) {
       <main className="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 py-8">
         {/* Breadcrumb & Navigation */}
         <div className="flex items-center gap-2 text-xs font-medium text-slate-500 mb-4">
-          <Link href="/" className="hover:text-emerald-700">Home</Link>
+          <Link href="/" className="hover:text-red-700">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <Link href="/projects" className="hover:text-emerald-700">Projects</Link>
+          <Link href="/projects" className="hover:text-red-700">Projects</Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <span className="text-slate-900 font-semibold truncate">{project.title}</span>
         </div>
@@ -52,7 +52,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
             />
             <div className="absolute top-4 left-4">
               <span className="bg-slate-900/80 backdrop-blur-md text-white font-semibold text-xs px-3 py-1.5 rounded-full inline-flex items-center gap-1.5">
-                <Key className="w-3.5 h-3.5 text-emerald-400" /> {project.tag}
+                <Key className="w-3.5 h-3.5 text-red-500" /> {project.tag}
               </span>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
 
         {/* Title & Location Header */}
         <div className="mb-8">
-          <div className="flex items-center gap-2 text-emerald-700 text-xs font-semibold uppercase tracking-wider mb-2">
+          <div className="flex items-center gap-2 text-red-700 text-xs font-semibold uppercase tracking-wider mb-2">
             <MapPin className="w-4 h-4" /> {project.address}
           </div>
           <h1 className="text-2xl sm:text-4xl font-bold text-slate-900 font-outfit">
@@ -87,19 +87,19 @@ export default function ProjectDetailPage({ params }: PageProps) {
             {/* Specs Bar */}
             <div className="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm flex flex-wrap items-center justify-between gap-4 text-slate-700 text-sm">
               <div className="flex items-center gap-2 font-medium">
-                <Maximize2 className="w-4 h-4 text-emerald-600" /> <span>{project.area}</span>
+                <Maximize2 className="w-4 h-4 text-red-600" /> <span>{project.area}</span>
               </div>
               <div className="w-px h-6 bg-slate-200 hidden sm:block" />
               <div className="flex items-center gap-2 font-medium">
-                <Bed className="w-4 h-4 text-emerald-600" /> <span>{project.beds} Bedrooms</span>
+                <Bed className="w-4 h-4 text-red-600" /> <span>{project.beds} Bedrooms</span>
               </div>
               <div className="w-px h-6 bg-slate-200 hidden sm:block" />
               <div className="flex items-center gap-2 font-medium">
-                <Bath className="w-4 h-4 text-emerald-600" /> <span>{project.baths} Bathrooms</span>
+                <Bath className="w-4 h-4 text-red-600" /> <span>{project.baths} Bathrooms</span>
               </div>
               <div className="w-px h-6 bg-slate-200 hidden sm:block" />
               <div className="flex items-center gap-2 font-medium">
-                <Car className="w-4 h-4 text-emerald-600" /> <span>{project.cars} Parking Spaces</span>
+                <Car className="w-4 h-4 text-red-600" /> <span>{project.cars} Parking Spaces</span>
               </div>
             </div>
 
@@ -112,7 +112,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
               <div className="pt-2 space-y-2.5">
                 {project.bulletPoints.map((pt, i) => (
                   <div className="flex items-start gap-3 text-sm text-slate-700" key={i}>
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                     <span>{pt}</span>
                   </div>
                 ))}
@@ -126,7 +126,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                 {project.amenities.map((item, i) => (
                   <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100 text-slate-800 text-xs font-medium" key={i}>
-                    <Sparkles className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <Sparkles className="w-3.5 h-3.5 text-red-600 shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -139,7 +139,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
             {/* Price Box */}
             <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm space-y-2">
               <span className="text-xs font-medium text-slate-500 uppercase tracking-wider">Listing Price</span>
-              <div className="text-3xl font-extrabold text-slate-900 font-outfit text-emerald-700">
+              <div className="text-3xl font-extrabold text-slate-900 font-outfit text-red-700">
                 {project.price}
               </div>
               <p className="text-xs text-slate-500">Property {project.tag.toLowerCase()}</p>
@@ -153,21 +153,21 @@ export default function ProjectDetailPage({ params }: PageProps) {
                 <input
                   type="text"
                   placeholder="Full name"
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-900"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-red-600/20 text-slate-900"
                 />
                 <input
                   type="email"
                   placeholder="Email address"
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-900"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-red-600/20 text-slate-900"
                 />
                 <input
                   type="tel"
                   placeholder="Phone number"
-                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-900"
+                  className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-red-600/20 text-slate-900"
                 />
                 <button
                   type="submit"
-                  className="w-full py-3 bg-slate-900 hover:bg-emerald-700 text-white font-semibold text-xs rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm"
+                  className="w-full py-3 bg-slate-900 hover:bg-red-700 text-white font-semibold text-xs rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm"
                 >
                   Request Information <Send className="w-3.5 h-3.5" />
                 </button>
@@ -180,7 +180,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
                 <img
                   src={project.agent.avatar}
                   alt={project.agent.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-emerald-500/20"
+                  className="w-14 h-14 rounded-full object-cover border-2 border-red-600/20"
                 />
                 <div>
                   <h4 className="text-sm font-bold text-slate-900">{project.agent.name}</h4>
@@ -189,11 +189,11 @@ export default function ProjectDetailPage({ params }: PageProps) {
               </div>
               <div className="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-600">
                 <div className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-emerald-600" />
+                  <Phone className="w-3.5 h-3.5 text-red-600" />
                   <a href={`tel:${project.agent.phone}`} className="hover:underline font-medium text-slate-900">{project.agent.phone}</a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail className="w-3.5 h-3.5 text-emerald-600" />
+                  <Mail className="w-3.5 h-3.5 text-red-600" />
                   <a href={`mailto:${project.agent.email}`} className="hover:underline">{project.agent.email}</a>
                 </div>
               </div>
@@ -204,8 +204,8 @@ export default function ProjectDetailPage({ params }: PageProps) {
         {/* Promo Banner Section */}
         <section className="my-16 bg-[#0f141d] rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl border border-slate-800">
           <div className="space-y-4 max-w-xl">
-            <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-3.5 py-1.5 rounded-full border border-emerald-500/20">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" /> Get in touch
+            <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-red-500 bg-red-600/10 px-3.5 py-1.5 rounded-full border border-red-600/20">
+              <ShieldCheck className="w-4 h-4 text-red-500" /> Get in touch
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold font-outfit text-white tracking-tight">
               Explore your dream home today
@@ -216,7 +216,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
             <div className="pt-2">
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2.5 bg-white hover:bg-emerald-400 font-bold text-xs px-6 py-3.5 rounded-full transition-all duration-200 shadow-md group"
+                className="inline-flex items-center gap-2.5 bg-white hover:bg-red-500 font-bold text-xs px-6 py-3.5 rounded-full transition-all duration-200 shadow-md group"
                 style={{ color: '#0f141d' }}
               >
                 <span className="text-[#0f141d] group-hover:text-slate-950 font-bold">Start exploring</span>
@@ -231,7 +231,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
           <section className="my-12">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-bold text-slate-900 font-outfit">More properties</h2>
-              <Link href="/projects" className="text-xs font-semibold text-emerald-700 hover:underline inline-flex items-center gap-1">
+              <Link href="/projects" className="text-xs font-semibold text-red-700 hover:underline inline-flex items-center gap-1">
                 More properties <ChevronRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -251,10 +251,10 @@ export default function ProjectDetailPage({ params }: PageProps) {
                   </div>
                   <div className="property-card-info">
                     <Link href={`/projects/${rel.id}`}>
-                      <h3 className="property-card-title hover:text-emerald-700 transition-colors">{rel.title}</h3>
+                      <h3 className="property-card-title hover:text-red-700 transition-colors">{rel.title}</h3>
                     </Link>
                     <div className="property-card-location">
-                      <MapPin className="w-4 h-4 text-emerald-600" />
+                      <MapPin className="w-4 h-4 text-red-600" />
                       <span>{rel.address}</span>
                     </div>
                     <div className="property-card-divider" />

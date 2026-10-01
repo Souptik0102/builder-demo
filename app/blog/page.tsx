@@ -50,7 +50,7 @@ export default function BlogPage() {
         <section className="bg-[#0f141d] text-white pt-16 pb-20 px-4 sm:px-8 rounded-b-[32px] reveal-on-scroll">
           <div className="max-w-5xl mx-auto space-y-8">
             <div className="text-center space-y-3">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-red-500 text-xs font-semibold uppercase tracking-wider">
                 <BookOpen className="w-3.5 h-3.5" /> Editorial & Insights
               </span>
               <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white font-outfit">
@@ -67,7 +67,7 @@ export default function BlogPage() {
                 <Link
                   href={`/blog/${feat.id}`}
                   key={feat.id}
-                  className="group bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all duration-300 flex flex-col"
+                  className="group bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:border-red-600/50 transition-all duration-300 flex flex-col"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -76,16 +76,16 @@ export default function BlogPage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-3 left-3 flex gap-2">
-                      <span className="bg-slate-900/80 backdrop-blur-md text-emerald-400 text-[11px] font-semibold px-2.5 py-1 rounded-full">
+                      <span className="bg-slate-900/80 backdrop-blur-md text-red-500 text-[11px] font-semibold px-2.5 py-1 rounded-full">
                         {feat.tag}
                       </span>
                     </div>
                   </div>
                   <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
                     <div className="flex items-center text-slate-400 text-xs gap-2">
-                      <Calendar className="w-3.5 h-3.5 text-emerald-400" /> {feat.date}
+                      <Calendar className="w-3.5 h-3.5 text-red-500" /> {feat.date}
                     </div>
-                    <h3 className="text-base font-bold text-white group-hover:text-emerald-400 transition-colors line-clamp-2">
+                    <h3 className="text-base font-bold text-white group-hover:text-red-500 transition-colors line-clamp-2">
                       {feat.title}
                     </h3>
                   </div>
@@ -111,7 +111,7 @@ export default function BlogPage() {
                       placeholder="Search for articles..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-8 pr-3 py-1.5 bg-slate-50/80 border border-slate-200/80 rounded-lg text-[11px] focus:outline-none focus:ring-2 focus:ring-emerald-500/20 text-slate-900 placeholder:text-slate-400"
+                      className="w-full pl-8 pr-3 py-1.5 bg-slate-50/80 border border-slate-200/80 rounded-lg text-[11px] focus:outline-none focus:ring-2 focus:ring-red-600/20 text-slate-900 placeholder:text-slate-400"
                     />
                   </div>
                 </div>
@@ -132,7 +132,7 @@ export default function BlogPage() {
                       >
                         <Tag className="w-3 h-3 opacity-60" />
                         <span>{cat.label}</span>
-                        {selectedCategory === cat.id && <Sparkles className="w-3 h-3 text-emerald-400" />}
+                        {selectedCategory === cat.id && <Sparkles className="w-3 h-3 text-red-500" />}
                       </button>
                     ))}
                   </div>
@@ -152,7 +152,7 @@ export default function BlogPage() {
                   <p className="text-slate-600 text-sm font-medium">No articles matched your criteria.</p>
                   <button
                     onClick={() => { setSearchTerm(''); setSelectedCategory('all'); }}
-                    className="text-xs font-semibold text-emerald-600 hover:underline"
+                    className="text-xs font-semibold text-red-600 hover:underline"
                   >
                     Reset filters
                   </button>
@@ -170,7 +170,7 @@ export default function BlogPage() {
                           alt={art.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
-                        <span className="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-emerald-400 text-[10px] font-semibold px-2 py-0.5 rounded-full">
+                        <span className="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-red-500 text-[10px] font-semibold px-2 py-0.5 rounded-full">
                           {art.tag}
                         </span>
                       </div>
@@ -179,14 +179,14 @@ export default function BlogPage() {
                         <div className="space-y-2">
                           <div className="flex items-center text-xs text-slate-400 gap-3">
                             <span className="flex items-center gap-1">
-                              <Calendar className="w-3.5 h-3.5 text-emerald-600" /> {art.date}
+                              <Calendar className="w-3.5 h-3.5 text-red-600" /> {art.date}
                             </span>
                             <span>•</span>
                             <span>{art.readTime}</span>
                           </div>
 
                           <Link href={`/blog/${art.id}`}>
-                            <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2">
+                            <h3 className="text-lg font-bold text-slate-900 group-hover:text-red-700 transition-colors line-clamp-2">
                               {art.title}
                             </h3>
                           </Link>
@@ -198,7 +198,7 @@ export default function BlogPage() {
 
                         <div className="pt-2 flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold flex items-center justify-center">
+                            <span className="w-6 h-6 rounded-full bg-red-100 text-red-800 text-[10px] font-bold flex items-center justify-center">
                               {art.author.avatar}
                             </span>
                             <span className="text-xs text-slate-700 font-medium">{art.author.name}</span>
@@ -206,7 +206,7 @@ export default function BlogPage() {
 
                           <Link
                             href={`/blog/${art.id}`}
-                            className="text-xs font-semibold text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1"
+                            className="text-xs font-semibold text-red-700 hover:text-red-900 inline-flex items-center gap-1"
                           >
                             Read more <ChevronRight className="w-3.5 h-3.5" />
                           </Link>

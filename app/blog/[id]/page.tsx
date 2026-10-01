@@ -34,9 +34,9 @@ export default function BlogDetailPage({ params }: PageProps) {
       <main className="flex-1 max-w-4xl mx-auto w-full px-4 sm:px-6 py-10">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-xs font-medium text-slate-500 mb-6">
-          <Link href="/" className="hover:text-emerald-700">Home</Link>
+          <Link href="/" className="hover:text-red-700">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <Link href="/blog" className="hover:text-emerald-700">Blog</Link>
+          <Link href="/blog" className="hover:text-red-700">Blog</Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <span className="text-slate-900 font-semibold truncate">{article.title}</span>
         </div>
@@ -44,7 +44,7 @@ export default function BlogDetailPage({ params }: PageProps) {
         {/* Article Header Card */}
         <div className="bg-white rounded-2xl p-6 sm:p-10 border border-slate-100 shadow-sm space-y-6 mb-8 reveal-on-scroll">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-700 text-xs font-semibold">
               <Tag className="w-3.5 h-3.5" /> {article.tag}
             </span>
             <span className="text-xs text-slate-400 flex items-center gap-1">
@@ -83,7 +83,7 @@ export default function BlogDetailPage({ params }: PageProps) {
 
         {/* Article Body */}
         <div className="bg-white rounded-2xl p-6 sm:p-10 border border-slate-100 shadow-sm space-y-6 text-slate-700 leading-relaxed text-sm sm:text-base mb-10">
-          <p className="text-base sm:text-lg font-medium text-slate-900 leading-relaxed border-l-4 border-emerald-500 pl-4 py-1 italic bg-emerald-50/50 rounded-r-xl">
+          <p className="text-base sm:text-lg font-medium text-slate-900 leading-relaxed border-l-4 border-red-600 pl-4 py-1 italic bg-red-50/50 rounded-r-xl">
             "{article.excerpt}"
           </p>
 
@@ -95,12 +95,12 @@ export default function BlogDetailPage({ params }: PageProps) {
           {article.keyTakeaways && article.keyTakeaways.length > 0 && (
             <div className="mt-8 bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-3">
               <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-emerald-600" /> Key Takeaways
+                <BookOpen className="w-4 h-4 text-red-600" /> Key Takeaways
               </h3>
               <ul className="space-y-2.5">
                 {article.keyTakeaways.map((takeaway, i) => (
                   <li className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-800" key={i}>
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                     <span>{takeaway}</span>
                   </li>
                 ))}
@@ -121,16 +121,16 @@ export default function BlogDetailPage({ params }: PageProps) {
                   className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div className="space-y-2">
-                    <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full inline-block">
+                    <span className="text-[11px] font-semibold text-red-700 bg-red-50 px-2.5 py-0.5 rounded-full inline-block">
                       {rel.tag}
                     </span>
-                    <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2">
+                    <h3 className="text-base font-bold text-slate-900 group-hover:text-red-700 transition-colors line-clamp-2">
                       {rel.title}
                     </h3>
                   </div>
                   <div className="pt-4 flex items-center justify-between text-xs text-slate-400">
                     <span>{rel.date}</span>
-                    <span className="font-semibold text-emerald-700 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                    <span className="font-semibold text-red-700 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                       Read story <ChevronRight className="w-3.5 h-3.5" />
                     </span>
                   </div>

@@ -10,15 +10,19 @@ export function SiteFooter() {
       <footer className="site-footer">
         <div className="footer-card">
           <div className="footer-brand-header">
-            <Link className="footer-brand" href="/">
-              <Building2 className="w-5 h-5 text-emerald-400" />
-              <span>HomeIQ<sup className="text-emerald-400 font-semibold">2</sup></span>
+            <Link className="footer-brand flex items-center gap-3" href="/">
+              <div className="bg-white/95 p-1 rounded-lg border border-red-600/30 shadow-md">
+                <img src="/logo.jpg" alt="Traum Properties Logo" className="h-9 w-auto object-contain rounded" />
+              </div>
+              <span className="font-extrabold text-white text-base tracking-tight font-outfit uppercase">
+                Traum <span className="text-red-500">Properties Pvt Ltd</span>
+              </span>
             </Link>
           </div>
           <div className="footer-divider" />
           <div className="footer-bottom">
             <p className="footer-copyright">
-              Copyright © 2025 HomeIQ² | Exclusive Luxury Real Estate
+              Copyright © 2026 TRAUM PROPERTIES PVT LTD | Exclusive Luxury Real Estate
             </p>
             <div className="footer-social-links">
               <Link href="/" aria-label="Facebook">

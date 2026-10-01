@@ -21,7 +21,7 @@ export function FloatingWhatsApp() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const message = 'Hello HomeIQ² Team! I am interested in exploring your exclusive properties and luxury real estate listings. Could you please share more details?'
+  const message = 'Hello Traum Properties Pvt Ltd Team! I am interested in exploring your exclusive properties and luxury real estate listings. Could you please share more details?'
   const whatsappUrl = `https://wa.me/917603037718?text=${encodeURIComponent(message)}`
 
   return (
